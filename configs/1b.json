@@ -1,0 +1,21 @@
+{
+  "notes": "~25 GB peak at micro_bs 4. Only worth it with >=25B packed tokens.",
+  "model": {
+    "preset": "1b",
+    "max_seq_len": 2048
+  },
+  "train": {
+    "data_dir": "data/mix1",
+    "out_dir": "runs/1b",
+    "seq_len": 2048,
+    "micro_bs": 4,
+    "grad_accum": 16,
+    "total_tokens": "25e9",
+    "warmup_tokens": "500e6",
+    "lr": 0.0002,
+    "min_lr_frac": 0.1,
+    "eval_interval": 250,
+    "ckpt_interval": 500,
+    "keep_last": 2
+  }
+}

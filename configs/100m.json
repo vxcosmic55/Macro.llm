@@ -1,0 +1,20 @@
+{
+  "notes": "Fastest full run: ~3 GPU-days at 40 TFLOPs, 149 tok/param.",
+  "model": {
+    "preset": "100m",
+    "max_seq_len": 2048
+  },
+  "train": {
+    "data_dir": "data/mix1",
+    "out_dir": "runs/100m",
+    "seq_len": 2048,
+    "micro_bs": 32,
+    "grad_accum": 2,
+    "total_tokens": "15e9",
+    "warmup_tokens": "300e6",
+    "lr": 0.0006,
+    "min_lr_frac": 0.1,
+    "eval_interval": 500,
+    "ckpt_interval": 1000
+  }
+}

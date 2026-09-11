@@ -1,0 +1,29 @@
+{
+  "notes": "Tiny CPU-runnable config for wiring changes; not a real run.",
+  "model": {
+    "preset": "100m",
+    "d_model": 256,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_kv_head": 2,
+    "d_ff": 512,
+    "max_seq_len": 256,
+    "loss_chunk_tokens": 1024
+  },
+  "train": {
+    "data_dir": "data/mix1",
+    "out_dir": "runs/debug",
+    "seq_len": 256,
+    "micro_bs": 4,
+    "grad_accum": 2,
+    "total_tokens": "5e6",
+    "warmup_tokens": "5e5",
+    "lr": 0.0006,
+    "log_interval": 5,
+    "eval_interval": 50,
+    "eval_batches": 5,
+    "ckpt_interval": 100,
+    "grad_checkpointing": false,
+    "device": "cpu"
+  }
+}

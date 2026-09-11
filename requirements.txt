@@ -1,0 +1,14 @@
+# requirements.txt
+
+# core (pure PyTorch model / training / sampling / eval)
+torch>=2.4
+numpy>=1.26
+
+# HuggingFace, used only at the data edges:
+#   datasets   -> streaming the corpus mixture
+#   tokenizers -> training the byte-level BPE
+datasets>=2.19
+tokenizers>=0.19
+
+# optional: faster streaming decompression for fineweb parquet shards
+pyarrow>=15.0

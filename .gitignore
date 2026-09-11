@@ -1,0 +1,29 @@
+# .gitignore
+
+# packed corpora and tokenizers (regenerate with `make tokenizer && make pack`)
+data/**
+!data/.gitkeep
+
+# run artifacts
+runs/**
+!runs/.gitkeep
+*.pt
+*.bin
+*.jsonl.gz
+wandb/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# editor / os
+.vscode/
+.idea/
+.DS_Store
+
+# keep the probe sets under version control
+!tasks/*.jsonl

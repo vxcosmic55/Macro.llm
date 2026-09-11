@@ -1,0 +1,20 @@
+{
+  "notes": "~17 GB peak. Halve micro_bs and double grad_accum if you OOM.",
+  "model": {
+    "preset": "650m",
+    "max_seq_len": 2048
+  },
+  "train": {
+    "data_dir": "data/mix1",
+    "out_dir": "runs/650m",
+    "seq_len": 2048,
+    "micro_bs": 8,
+    "grad_accum": 8,
+    "total_tokens": "20e9",
+    "warmup_tokens": "400e6",
+    "lr": 0.00025,
+    "min_lr_frac": 0.1,
+    "eval_interval": 500,
+    "ckpt_interval": 1000
+  }
+}

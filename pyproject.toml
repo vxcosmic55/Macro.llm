@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scratch-lm"
+version = "0.1.0"
+description = "From-scratch language model: pure-PyTorch internals, config-driven scale"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.4",
+    "numpy>=1.26",
+    "datasets>=2.19",
+    "tokenizers>=0.19",
+]
+
+[tool.setuptools]
+packages = ["lm"]
